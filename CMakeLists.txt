@@ -36,7 +36,7 @@ endif()
 file(GLOB TEST_SRCS "${CMAKE_SOURCE_DIR}/tests/test_*.cpp")
 foreach(t ${TEST_SRCS})
     get_filename_component(name_we ${t} NAME_WE)
-    add_executable(${name_we} ${t} ${SRC_LIST})
+    add_executable(${name_we} ${t} ${SRC_LIST_NO_MAIN})
     target_include_directories(${name_we} PRIVATE
         ${CMAKE_SOURCE_DIR}
         ${CMAKE_SOURCE_DIR}/src

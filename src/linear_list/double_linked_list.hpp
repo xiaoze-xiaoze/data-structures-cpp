@@ -1,27 +1,24 @@
 #include "../error/error.hpp"
 
 template<typename T>
-class CircularLinkList {
+class DoubleLinkList {
 public:
     struct Node {
         T data;
+        Node* prev;
         Node* next;
     };
     int length;
 
 protected:
     Node* head;
-    Node* tail;
 
-public: 
-
-    CircularLinkList(): length(0) {
-        head = new Node{ T(), nullptr };
-        head->next = head;
-        tail = head;
+public:
+    DoubleLinkList(): length(0) {
+        head = new Node{ T(), nullptr, nullptr };
     }
 
-    ~CircularLinkList() {
+    ~DoubleLinkList() {
         clear();
         delete head;
     }
@@ -34,16 +31,15 @@ public:
         if (index < 0 || index > length) return std::unexpected(DataStructureError::IndexOutOfRange);
         Node* prevNode = head;
         for (int i = 0;i < index;i++) prevNode = prevNode->next;
-        Node* newNode = new Node{ value, prevNode->next };
-        prevNode->next = newNode;
-        if (index == length) {
-            tail = newNode;
-            tail->next = head;
+        Node* newNode = new Node{ value, prevNode, prevNode->next };
+        if (prevNode->next != nullptr) {
+            prevNode->next->prev = newNode;
         }
+        prevNode->next = newNode;
         length++;
         return {};
     }
-
+    
     std::expected<void, DataStructureError> pushFront(const T& value) {
         return insert(0, value);
     }
@@ -54,20 +50,16 @@ public:
 
     std::expected<T, DataStructureError> erase(int index) {
         if (index < 0 || index >= length) return std::unexpected(DataStructureError::IndexOutOfRange);
-        Node* prevNode = head;
-        for (int i = 0;i < index;i++) prevNode = prevNode->next;
-        Node* deleteNode = prevNode->next;
-        prevNode->next = deleteNode->next;
+        Node* deleteNode = head->next;
+        for (int i = 0;i < index;i++) deleteNode = deleteNode->next;
         T value = deleteNode->data;
+        deleteNode->prev->next = deleteNode->next;
+        if (deleteNode->next != nullptr) deleteNode->next->prev = deleteNode->prev;
         delete deleteNode;
-        if (index == length - 1) {
-            tail = prevNode;
-            tail->next = head;
-        }
         length--;
         return value;
     }
-
+    
     std::expected<T, DataStructureError> popFront() {
         return erase(0);
     }
@@ -77,57 +69,53 @@ public:
     }
 
     std::expected<void, DataStructureError> remove(const T& value) {
-        Node* prevNode = head;
+        Node* deleteNode = head->next;
         for (int i = 0;i < length;i++) {
-            if (prevNode->next->data == value) {
-                Node* deleteNode = prevNode->next;
-                prevNode->next = deleteNode->next;
+            if (deleteNode->data == value) {
+                deleteNode->prev->next = deleteNode->next;
+                if (deleteNode->next != nullptr) deleteNode->next->prev = deleteNode->prev;
                 delete deleteNode;
-                if (i == length - 1) {
-                    tail = prevNode;
-                    tail->next = head;
-                }
                 length--;
                 return {};
             }
+            deleteNode = deleteNode->next;
         }
         return std::unexpected(DataStructureError::ElementNotFound);
     }
 
     std::expected<T, DataStructureError> get(int index) {
         if (index < 0 || index >= length) return std::unexpected(DataStructureError::IndexOutOfRange);
-        Node* p = head->next;
-        for (int i = 0;i < index;i++) p = p->next;
-        return p->data;
+        Node* node = head->next;
+        for (int i = 0;i < index;i++) node = node->next;
+        return node->data;
     }
 
     std::expected<int, DataStructureError> find(const T& value) {
-        Node* p = head->next;
+        Node* node = head->next;
         for (int i = 0;i < length;i++) {
-            if (p->data == value) return i;
-            p = p->next;
+            if (node->data == value) return i;
+            node = node->next;
         }
         return std::unexpected(DataStructureError::ElementNotFound);
     }
 
     std::expected<T, DataStructureError> update(int index, const T& newValue) {
         if (index < 0 || index >= length) return std::unexpected(DataStructureError::IndexOutOfRange);
-        Node* p = head->next;
-        for (int i = 0;i < index;i++) p = p->next;
-        T oldValue = p->data;
-        p->data = newValue;
+        Node* node = head->next;
+        for (int i = 0;i < index;i++) node = node->next;
+        T oldValue = node->data;
+        node->data = newValue;
         return oldValue;
     }
 
     void clear() {
         Node* node = head->next;
         for (int i = 0;i < length;i++) {
-            Node* deleteNode = node;
-            node = node->next;
-            delete deleteNode;
+            Node* nextNode = node->next;
+            delete node;
+            node = nextNode;
         }
-        head->next = head;
-        tail = head;
+        head->next = nullptr;
         length = 0;
     }
 };

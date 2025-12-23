@@ -1,7 +1,7 @@
 #include "../error/error.hpp"
 
 template<typename T>
-class DoubleLinkList {
+class CircularDoubleLinkList {
 public:
     struct Node {
         T data;
@@ -12,13 +12,17 @@ public:
 
 protected:
     Node* head;
+    Node* tail;
 
 public:
-    DoubleLinkList(): length(0) {
+    CircularDoubleLinkList() : length(0) {
         head = new Node{ T(), nullptr, nullptr };
+        head->next = head;
+        head->prev = head;
+        tail = head;
     }
 
-    ~DoubleLinkList() {
+    ~CircularDoubleLinkList() {
         clear();
         delete head;
     }
@@ -32,14 +36,17 @@ public:
         Node* prevNode = head;
         for (int i = 0;i < index;i++) prevNode = prevNode->next;
         Node* newNode = new Node{ value, prevNode, prevNode->next };
-        if (prevNode->next != nullptr) {
-            prevNode->next->prev = newNode;
-        }
+        prevNode->next->prev = newNode;
         prevNode->next = newNode;
+        if (index == length) {
+            tail = newNode;
+            tail->next = head;
+            head->prev = tail;
+        }
         length++;
         return {};
     }
-    
+
     std::expected<void, DataStructureError> pushFront(const T& value) {
         return insert(0, value);
     }
@@ -55,11 +62,16 @@ public:
         T value = deleteNode->data;
         deleteNode->prev->next = deleteNode->next;
         deleteNode->next->prev = deleteNode->prev;
+        if (index == length - 1) {
+            tail = deleteNode->prev;
+            tail->next = head;
+            head->prev = tail;
+        }
         delete deleteNode;
         length--;
         return value;
     }
-    
+
     std::expected<T, DataStructureError> popFront() {
         return erase(0);
     }
@@ -68,12 +80,17 @@ public:
         return erase(length - 1);
     }
 
-    std::expected<void, DataStructureError> remove(const T& value) {    
+    std::expected<void, DataStructureError> remove(const T& value) {
         Node* deleteNode = head->next;
         for (int i = 0;i < length;i++) {
             if (deleteNode->data == value) {
                 deleteNode->prev->next = deleteNode->next;
                 deleteNode->next->prev = deleteNode->prev;
+                if (i == length - 1) {
+                    tail = deleteNode->prev;
+                    tail->next = head;
+                    head->prev = tail;
+                }
                 delete deleteNode;
                 length--;
                 return {};
@@ -115,7 +132,8 @@ public:
             delete node;
             node = nextNode;
         }
-        head->next = nullptr;
+        head->next = head;
+        tail = head;
         length = 0;
     }
 };

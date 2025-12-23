@@ -147,7 +147,6 @@ src/error/error.obj: src/error/error.cpp.obj
 # target to build an object file
 src/error/error.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/error/error.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/error/error.cpp.obj
 .PHONY : src/error/error.cpp.obj
 
 src/error/error.i: src/error/error.cpp.i
@@ -156,7 +155,6 @@ src/error/error.i: src/error/error.cpp.i
 # target to preprocess a source file
 src/error/error.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/error/error.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/error/error.cpp.i
 .PHONY : src/error/error.cpp.i
 
 src/error/error.s: src/error/error.cpp.s
@@ -165,7 +163,6 @@ src/error/error.s: src/error/error.cpp.s
 # target to generate assembly for a file
 src/error/error.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/error/error.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/error/error.cpp.s
 .PHONY : src/error/error.cpp.s
 
 src/graph/adjacency_matrix_graph.obj: src/graph/adjacency_matrix_graph.cpp.obj
@@ -174,7 +171,6 @@ src/graph/adjacency_matrix_graph.obj: src/graph/adjacency_matrix_graph.cpp.obj
 # target to build an object file
 src/graph/adjacency_matrix_graph.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/graph/adjacency_matrix_graph.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/graph/adjacency_matrix_graph.cpp.obj
 .PHONY : src/graph/adjacency_matrix_graph.cpp.obj
 
 src/graph/adjacency_matrix_graph.i: src/graph/adjacency_matrix_graph.cpp.i
@@ -183,7 +179,6 @@ src/graph/adjacency_matrix_graph.i: src/graph/adjacency_matrix_graph.cpp.i
 # target to preprocess a source file
 src/graph/adjacency_matrix_graph.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/graph/adjacency_matrix_graph.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/graph/adjacency_matrix_graph.cpp.i
 .PHONY : src/graph/adjacency_matrix_graph.cpp.i
 
 src/graph/adjacency_matrix_graph.s: src/graph/adjacency_matrix_graph.cpp.s
@@ -192,7 +187,6 @@ src/graph/adjacency_matrix_graph.s: src/graph/adjacency_matrix_graph.cpp.s
 # target to generate assembly for a file
 src/graph/adjacency_matrix_graph.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/graph/adjacency_matrix_graph.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/graph/adjacency_matrix_graph.cpp.s
 .PHONY : src/graph/adjacency_matrix_graph.cpp.s
 
 src/linear_list/circular_double_linked_list.obj: src/linear_list/circular_double_linked_list.cpp.obj
@@ -201,7 +195,6 @@ src/linear_list/circular_double_linked_list.obj: src/linear_list/circular_double
 # target to build an object file
 src/linear_list/circular_double_linked_list.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/circular_double_linked_list.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/circular_double_linked_list.cpp.obj
 .PHONY : src/linear_list/circular_double_linked_list.cpp.obj
 
 src/linear_list/circular_double_linked_list.i: src/linear_list/circular_double_linked_list.cpp.i
@@ -210,7 +203,6 @@ src/linear_list/circular_double_linked_list.i: src/linear_list/circular_double_l
 # target to preprocess a source file
 src/linear_list/circular_double_linked_list.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/circular_double_linked_list.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/circular_double_linked_list.cpp.i
 .PHONY : src/linear_list/circular_double_linked_list.cpp.i
 
 src/linear_list/circular_double_linked_list.s: src/linear_list/circular_double_linked_list.cpp.s
@@ -219,7 +211,6 @@ src/linear_list/circular_double_linked_list.s: src/linear_list/circular_double_l
 # target to generate assembly for a file
 src/linear_list/circular_double_linked_list.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/circular_double_linked_list.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/circular_double_linked_list.cpp.s
 .PHONY : src/linear_list/circular_double_linked_list.cpp.s
 
 src/linear_list/circular_linked_list.obj: src/linear_list/circular_linked_list.cpp.obj
@@ -228,7 +219,6 @@ src/linear_list/circular_linked_list.obj: src/linear_list/circular_linked_list.c
 # target to build an object file
 src/linear_list/circular_linked_list.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/circular_linked_list.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/circular_linked_list.cpp.obj
 .PHONY : src/linear_list/circular_linked_list.cpp.obj
 
 src/linear_list/circular_linked_list.i: src/linear_list/circular_linked_list.cpp.i
@@ -237,7 +227,6 @@ src/linear_list/circular_linked_list.i: src/linear_list/circular_linked_list.cpp
 # target to preprocess a source file
 src/linear_list/circular_linked_list.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/circular_linked_list.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/circular_linked_list.cpp.i
 .PHONY : src/linear_list/circular_linked_list.cpp.i
 
 src/linear_list/circular_linked_list.s: src/linear_list/circular_linked_list.cpp.s
@@ -246,7 +235,6 @@ src/linear_list/circular_linked_list.s: src/linear_list/circular_linked_list.cpp
 # target to generate assembly for a file
 src/linear_list/circular_linked_list.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/circular_linked_list.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/circular_linked_list.cpp.s
 .PHONY : src/linear_list/circular_linked_list.cpp.s
 
 src/linear_list/double_linked_list.obj: src/linear_list/double_linked_list.cpp.obj
@@ -255,7 +243,6 @@ src/linear_list/double_linked_list.obj: src/linear_list/double_linked_list.cpp.o
 # target to build an object file
 src/linear_list/double_linked_list.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/double_linked_list.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/double_linked_list.cpp.obj
 .PHONY : src/linear_list/double_linked_list.cpp.obj
 
 src/linear_list/double_linked_list.i: src/linear_list/double_linked_list.cpp.i
@@ -264,7 +251,6 @@ src/linear_list/double_linked_list.i: src/linear_list/double_linked_list.cpp.i
 # target to preprocess a source file
 src/linear_list/double_linked_list.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/double_linked_list.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/double_linked_list.cpp.i
 .PHONY : src/linear_list/double_linked_list.cpp.i
 
 src/linear_list/double_linked_list.s: src/linear_list/double_linked_list.cpp.s
@@ -273,7 +259,6 @@ src/linear_list/double_linked_list.s: src/linear_list/double_linked_list.cpp.s
 # target to generate assembly for a file
 src/linear_list/double_linked_list.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/double_linked_list.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/double_linked_list.cpp.s
 .PHONY : src/linear_list/double_linked_list.cpp.s
 
 src/linear_list/linked_list.obj: src/linear_list/linked_list.cpp.obj
@@ -282,7 +267,6 @@ src/linear_list/linked_list.obj: src/linear_list/linked_list.cpp.obj
 # target to build an object file
 src/linear_list/linked_list.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/linked_list.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/linked_list.cpp.obj
 .PHONY : src/linear_list/linked_list.cpp.obj
 
 src/linear_list/linked_list.i: src/linear_list/linked_list.cpp.i
@@ -291,7 +275,6 @@ src/linear_list/linked_list.i: src/linear_list/linked_list.cpp.i
 # target to preprocess a source file
 src/linear_list/linked_list.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/linked_list.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/linked_list.cpp.i
 .PHONY : src/linear_list/linked_list.cpp.i
 
 src/linear_list/linked_list.s: src/linear_list/linked_list.cpp.s
@@ -300,7 +283,6 @@ src/linear_list/linked_list.s: src/linear_list/linked_list.cpp.s
 # target to generate assembly for a file
 src/linear_list/linked_list.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/linked_list.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/linked_list.cpp.s
 .PHONY : src/linear_list/linked_list.cpp.s
 
 src/linear_list/sequential_list.obj: src/linear_list/sequential_list.cpp.obj
@@ -309,7 +291,6 @@ src/linear_list/sequential_list.obj: src/linear_list/sequential_list.cpp.obj
 # target to build an object file
 src/linear_list/sequential_list.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/sequential_list.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/sequential_list.cpp.obj
 .PHONY : src/linear_list/sequential_list.cpp.obj
 
 src/linear_list/sequential_list.i: src/linear_list/sequential_list.cpp.i
@@ -318,7 +299,6 @@ src/linear_list/sequential_list.i: src/linear_list/sequential_list.cpp.i
 # target to preprocess a source file
 src/linear_list/sequential_list.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/sequential_list.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/sequential_list.cpp.i
 .PHONY : src/linear_list/sequential_list.cpp.i
 
 src/linear_list/sequential_list.s: src/linear_list/sequential_list.cpp.s
@@ -327,7 +307,6 @@ src/linear_list/sequential_list.s: src/linear_list/sequential_list.cpp.s
 # target to generate assembly for a file
 src/linear_list/sequential_list.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/sequential_list.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/sequential_list.cpp.s
 .PHONY : src/linear_list/sequential_list.cpp.s
 
 src/linear_list/static_linked_list.obj: src/linear_list/static_linked_list.cpp.obj
@@ -336,7 +315,6 @@ src/linear_list/static_linked_list.obj: src/linear_list/static_linked_list.cpp.o
 # target to build an object file
 src/linear_list/static_linked_list.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/static_linked_list.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/static_linked_list.cpp.obj
 .PHONY : src/linear_list/static_linked_list.cpp.obj
 
 src/linear_list/static_linked_list.i: src/linear_list/static_linked_list.cpp.i
@@ -345,7 +323,6 @@ src/linear_list/static_linked_list.i: src/linear_list/static_linked_list.cpp.i
 # target to preprocess a source file
 src/linear_list/static_linked_list.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/static_linked_list.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/static_linked_list.cpp.i
 .PHONY : src/linear_list/static_linked_list.cpp.i
 
 src/linear_list/static_linked_list.s: src/linear_list/static_linked_list.cpp.s
@@ -354,7 +331,6 @@ src/linear_list/static_linked_list.s: src/linear_list/static_linked_list.cpp.s
 # target to generate assembly for a file
 src/linear_list/static_linked_list.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/linear_list/static_linked_list.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/linear_list/static_linked_list.cpp.s
 .PHONY : src/linear_list/static_linked_list.cpp.s
 
 src/main.obj: src/main.cpp.obj
@@ -363,7 +339,6 @@ src/main.obj: src/main.cpp.obj
 # target to build an object file
 src/main.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/main.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -372,7 +347,6 @@ src/main.i: src/main.cpp.i
 # target to preprocess a source file
 src/main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -381,7 +355,6 @@ src/main.s: src/main.cpp.s
 # target to generate assembly for a file
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/queue/circular_dequeue.obj: src/queue/circular_dequeue.cpp.obj
@@ -390,7 +363,6 @@ src/queue/circular_dequeue.obj: src/queue/circular_dequeue.cpp.obj
 # target to build an object file
 src/queue/circular_dequeue.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/circular_dequeue.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/circular_dequeue.cpp.obj
 .PHONY : src/queue/circular_dequeue.cpp.obj
 
 src/queue/circular_dequeue.i: src/queue/circular_dequeue.cpp.i
@@ -399,7 +371,6 @@ src/queue/circular_dequeue.i: src/queue/circular_dequeue.cpp.i
 # target to preprocess a source file
 src/queue/circular_dequeue.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/circular_dequeue.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/circular_dequeue.cpp.i
 .PHONY : src/queue/circular_dequeue.cpp.i
 
 src/queue/circular_dequeue.s: src/queue/circular_dequeue.cpp.s
@@ -408,7 +379,6 @@ src/queue/circular_dequeue.s: src/queue/circular_dequeue.cpp.s
 # target to generate assembly for a file
 src/queue/circular_dequeue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/circular_dequeue.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/circular_dequeue.cpp.s
 .PHONY : src/queue/circular_dequeue.cpp.s
 
 src/queue/circular_queue.obj: src/queue/circular_queue.cpp.obj
@@ -417,7 +387,6 @@ src/queue/circular_queue.obj: src/queue/circular_queue.cpp.obj
 # target to build an object file
 src/queue/circular_queue.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/circular_queue.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/circular_queue.cpp.obj
 .PHONY : src/queue/circular_queue.cpp.obj
 
 src/queue/circular_queue.i: src/queue/circular_queue.cpp.i
@@ -426,7 +395,6 @@ src/queue/circular_queue.i: src/queue/circular_queue.cpp.i
 # target to preprocess a source file
 src/queue/circular_queue.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/circular_queue.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/circular_queue.cpp.i
 .PHONY : src/queue/circular_queue.cpp.i
 
 src/queue/circular_queue.s: src/queue/circular_queue.cpp.s
@@ -435,7 +403,6 @@ src/queue/circular_queue.s: src/queue/circular_queue.cpp.s
 # target to generate assembly for a file
 src/queue/circular_queue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/circular_queue.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/circular_queue.cpp.s
 .PHONY : src/queue/circular_queue.cpp.s
 
 src/queue/list_dequeue.obj: src/queue/list_dequeue.cpp.obj
@@ -444,7 +411,6 @@ src/queue/list_dequeue.obj: src/queue/list_dequeue.cpp.obj
 # target to build an object file
 src/queue/list_dequeue.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/list_dequeue.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/list_dequeue.cpp.obj
 .PHONY : src/queue/list_dequeue.cpp.obj
 
 src/queue/list_dequeue.i: src/queue/list_dequeue.cpp.i
@@ -453,7 +419,6 @@ src/queue/list_dequeue.i: src/queue/list_dequeue.cpp.i
 # target to preprocess a source file
 src/queue/list_dequeue.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/list_dequeue.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/list_dequeue.cpp.i
 .PHONY : src/queue/list_dequeue.cpp.i
 
 src/queue/list_dequeue.s: src/queue/list_dequeue.cpp.s
@@ -462,7 +427,6 @@ src/queue/list_dequeue.s: src/queue/list_dequeue.cpp.s
 # target to generate assembly for a file
 src/queue/list_dequeue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/list_dequeue.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/list_dequeue.cpp.s
 .PHONY : src/queue/list_dequeue.cpp.s
 
 src/queue/list_queue.obj: src/queue/list_queue.cpp.obj
@@ -471,7 +435,6 @@ src/queue/list_queue.obj: src/queue/list_queue.cpp.obj
 # target to build an object file
 src/queue/list_queue.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/list_queue.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/list_queue.cpp.obj
 .PHONY : src/queue/list_queue.cpp.obj
 
 src/queue/list_queue.i: src/queue/list_queue.cpp.i
@@ -480,7 +443,6 @@ src/queue/list_queue.i: src/queue/list_queue.cpp.i
 # target to preprocess a source file
 src/queue/list_queue.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/list_queue.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/list_queue.cpp.i
 .PHONY : src/queue/list_queue.cpp.i
 
 src/queue/list_queue.s: src/queue/list_queue.cpp.s
@@ -489,7 +451,6 @@ src/queue/list_queue.s: src/queue/list_queue.cpp.s
 # target to generate assembly for a file
 src/queue/list_queue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/queue/list_queue.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/queue/list_queue.cpp.s
 .PHONY : src/queue/list_queue.cpp.s
 
 src/set/union_find_set.obj: src/set/union_find_set.cpp.obj
@@ -498,7 +459,6 @@ src/set/union_find_set.obj: src/set/union_find_set.cpp.obj
 # target to build an object file
 src/set/union_find_set.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/set/union_find_set.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/set/union_find_set.cpp.obj
 .PHONY : src/set/union_find_set.cpp.obj
 
 src/set/union_find_set.i: src/set/union_find_set.cpp.i
@@ -507,7 +467,6 @@ src/set/union_find_set.i: src/set/union_find_set.cpp.i
 # target to preprocess a source file
 src/set/union_find_set.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/set/union_find_set.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/set/union_find_set.cpp.i
 .PHONY : src/set/union_find_set.cpp.i
 
 src/set/union_find_set.s: src/set/union_find_set.cpp.s
@@ -516,7 +475,6 @@ src/set/union_find_set.s: src/set/union_find_set.cpp.s
 # target to generate assembly for a file
 src/set/union_find_set.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/set/union_find_set.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/set/union_find_set.cpp.s
 .PHONY : src/set/union_find_set.cpp.s
 
 src/stack/list_stack.obj: src/stack/list_stack.cpp.obj
@@ -525,7 +483,6 @@ src/stack/list_stack.obj: src/stack/list_stack.cpp.obj
 # target to build an object file
 src/stack/list_stack.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/stack/list_stack.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/stack/list_stack.cpp.obj
 .PHONY : src/stack/list_stack.cpp.obj
 
 src/stack/list_stack.i: src/stack/list_stack.cpp.i
@@ -534,7 +491,6 @@ src/stack/list_stack.i: src/stack/list_stack.cpp.i
 # target to preprocess a source file
 src/stack/list_stack.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/stack/list_stack.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/stack/list_stack.cpp.i
 .PHONY : src/stack/list_stack.cpp.i
 
 src/stack/list_stack.s: src/stack/list_stack.cpp.s
@@ -543,7 +499,6 @@ src/stack/list_stack.s: src/stack/list_stack.cpp.s
 # target to generate assembly for a file
 src/stack/list_stack.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/stack/list_stack.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/stack/list_stack.cpp.s
 .PHONY : src/stack/list_stack.cpp.s
 
 src/stack/vector_stack.obj: src/stack/vector_stack.cpp.obj
@@ -552,7 +507,6 @@ src/stack/vector_stack.obj: src/stack/vector_stack.cpp.obj
 # target to build an object file
 src/stack/vector_stack.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/stack/vector_stack.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/stack/vector_stack.cpp.obj
 .PHONY : src/stack/vector_stack.cpp.obj
 
 src/stack/vector_stack.i: src/stack/vector_stack.cpp.i
@@ -561,7 +515,6 @@ src/stack/vector_stack.i: src/stack/vector_stack.cpp.i
 # target to preprocess a source file
 src/stack/vector_stack.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/stack/vector_stack.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/stack/vector_stack.cpp.i
 .PHONY : src/stack/vector_stack.cpp.i
 
 src/stack/vector_stack.s: src/stack/vector_stack.cpp.s
@@ -570,7 +523,6 @@ src/stack/vector_stack.s: src/stack/vector_stack.cpp.s
 # target to generate assembly for a file
 src/stack/vector_stack.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/stack/vector_stack.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/stack/vector_stack.cpp.s
 .PHONY : src/stack/vector_stack.cpp.s
 
 src/tree/avl_tree.obj: src/tree/avl_tree.cpp.obj
@@ -579,7 +531,6 @@ src/tree/avl_tree.obj: src/tree/avl_tree.cpp.obj
 # target to build an object file
 src/tree/avl_tree.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/avl_tree.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/avl_tree.cpp.obj
 .PHONY : src/tree/avl_tree.cpp.obj
 
 src/tree/avl_tree.i: src/tree/avl_tree.cpp.i
@@ -588,7 +539,6 @@ src/tree/avl_tree.i: src/tree/avl_tree.cpp.i
 # target to preprocess a source file
 src/tree/avl_tree.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/avl_tree.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/avl_tree.cpp.i
 .PHONY : src/tree/avl_tree.cpp.i
 
 src/tree/avl_tree.s: src/tree/avl_tree.cpp.s
@@ -597,7 +547,6 @@ src/tree/avl_tree.s: src/tree/avl_tree.cpp.s
 # target to generate assembly for a file
 src/tree/avl_tree.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/avl_tree.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/avl_tree.cpp.s
 .PHONY : src/tree/avl_tree.cpp.s
 
 src/tree/binary_search_tree.obj: src/tree/binary_search_tree.cpp.obj
@@ -606,7 +555,6 @@ src/tree/binary_search_tree.obj: src/tree/binary_search_tree.cpp.obj
 # target to build an object file
 src/tree/binary_search_tree.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/binary_search_tree.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/binary_search_tree.cpp.obj
 .PHONY : src/tree/binary_search_tree.cpp.obj
 
 src/tree/binary_search_tree.i: src/tree/binary_search_tree.cpp.i
@@ -615,7 +563,6 @@ src/tree/binary_search_tree.i: src/tree/binary_search_tree.cpp.i
 # target to preprocess a source file
 src/tree/binary_search_tree.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/binary_search_tree.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/binary_search_tree.cpp.i
 .PHONY : src/tree/binary_search_tree.cpp.i
 
 src/tree/binary_search_tree.s: src/tree/binary_search_tree.cpp.s
@@ -624,7 +571,6 @@ src/tree/binary_search_tree.s: src/tree/binary_search_tree.cpp.s
 # target to generate assembly for a file
 src/tree/binary_search_tree.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/binary_search_tree.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/binary_search_tree.cpp.s
 .PHONY : src/tree/binary_search_tree.cpp.s
 
 src/tree/binary_tree.obj: src/tree/binary_tree.cpp.obj
@@ -633,7 +579,6 @@ src/tree/binary_tree.obj: src/tree/binary_tree.cpp.obj
 # target to build an object file
 src/tree/binary_tree.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/binary_tree.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/binary_tree.cpp.obj
 .PHONY : src/tree/binary_tree.cpp.obj
 
 src/tree/binary_tree.i: src/tree/binary_tree.cpp.i
@@ -642,7 +587,6 @@ src/tree/binary_tree.i: src/tree/binary_tree.cpp.i
 # target to preprocess a source file
 src/tree/binary_tree.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/binary_tree.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/binary_tree.cpp.i
 .PHONY : src/tree/binary_tree.cpp.i
 
 src/tree/binary_tree.s: src/tree/binary_tree.cpp.s
@@ -651,7 +595,6 @@ src/tree/binary_tree.s: src/tree/binary_tree.cpp.s
 # target to generate assembly for a file
 src/tree/binary_tree.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/binary_tree.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/binary_tree.cpp.s
 .PHONY : src/tree/binary_tree.cpp.s
 
 src/tree/red_black_tree.obj: src/tree/red_black_tree.cpp.obj
@@ -660,7 +603,6 @@ src/tree/red_black_tree.obj: src/tree/red_black_tree.cpp.obj
 # target to build an object file
 src/tree/red_black_tree.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/red_black_tree.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/red_black_tree.cpp.obj
 .PHONY : src/tree/red_black_tree.cpp.obj
 
 src/tree/red_black_tree.i: src/tree/red_black_tree.cpp.i
@@ -669,7 +611,6 @@ src/tree/red_black_tree.i: src/tree/red_black_tree.cpp.i
 # target to preprocess a source file
 src/tree/red_black_tree.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/red_black_tree.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/red_black_tree.cpp.i
 .PHONY : src/tree/red_black_tree.cpp.i
 
 src/tree/red_black_tree.s: src/tree/red_black_tree.cpp.s
@@ -678,7 +619,6 @@ src/tree/red_black_tree.s: src/tree/red_black_tree.cpp.s
 # target to generate assembly for a file
 src/tree/red_black_tree.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ds_main.dir\build.make CMakeFiles/ds_main.dir/src/tree/red_black_tree.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/src/tree/red_black_tree.cpp.s
 .PHONY : src/tree/red_black_tree.cpp.s
 
 tests/test_graph.obj: tests/test_graph.cpp.obj

@@ -87,7 +87,7 @@ public:
     }
 
     int reverse(int addCapacity) {
-        T newData = new T[capacity + addCapacity];
+        T* newData = new T[capacity + addCapacity];
         for (int i = 0;i < length;i++) newData[i] = data[i];
         delete[] data;
         data = newData;

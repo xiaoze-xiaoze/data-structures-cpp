@@ -108,12 +108,12 @@ CMakeFiles/ds_main.dir/clean:
 CMakeFiles/test_graph.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_graph.dir\build.make CMakeFiles/test_graph.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Data Structures and Algorithms\Data Structures with C++\build\CMakeFiles" --progress-num=22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43 "Built target test_graph"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="D:\Data Structures and Algorithms\Data Structures with C++\build\CMakeFiles" --progress-num=22,23 "Built target test_graph"
 .PHONY : CMakeFiles/test_graph.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_graph.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Data Structures and Algorithms\Data Structures with C++\build\CMakeFiles" 22
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Data Structures and Algorithms\Data Structures with C++\build\CMakeFiles" 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/test_graph.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Data Structures and Algorithms\Data Structures with C++\build\CMakeFiles" 0
 .PHONY : CMakeFiles/test_graph.dir/rule

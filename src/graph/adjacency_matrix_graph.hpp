@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <functional>
 #include <vector>
@@ -6,9 +7,8 @@
 #include <numeric>
 #include <optional>
 #include <algorithm>
-#include "../set/union_find_set.cpp"
+#include "../set/union_find_set.hpp"
 #include "../error/error.hpp"
-
 template<typename V, typename E>
 class AdjacencyMatrixGraph {
 public:
@@ -57,7 +57,7 @@ public:
     }
 
     std::expected<std::vector<V>, DataStructureError> getVertices(std::function<void(V)> visitor) const {
-        if (graph.isEmpty()) return std::unexpected(DataStructureError::ContainerIsEmpty);
+        if (isEmpty()) return std::unexpected(DataStructureError::ContainerIsEmpty);
         for (const auto& vertex : graph.vertices) visitor(vertex);
         return graph.vertices;
     }
@@ -217,7 +217,7 @@ public:
         return visited;
     }
 
-    std::expected<bool, DataStructureError> hasPath (V start, V end) const {
+    std::expected<bool, DataStructureError> hasPath(V start, V end) const {
         if (isEmpty()) return std::unexpected(DataStructureError::ContainerIsEmpty);
         TRY(startIndex, findVertexIndex(start));
         TRY(endIndex, findVertexIndex(end));
@@ -333,7 +333,8 @@ public:
         V start = graph.vertices[0];
         size_t visitedCount = 0;
         auto result = BFS(start, [&visitedCount](V vertex) { visitedCount++; });
-        return visitedCount == getVertexCount();
+        TRY(vertexCount, getVertexCount());
+        return visitedCount == vertexCount;
     }
 
     std::expected<Graph, DataStructureError> primMST(V start) const {
@@ -384,7 +385,7 @@ public:
         TRY(vertexCount, getVertexCount());
         for (size_t i = 0; i < vertexCount; i++) {
             for (size_t j = i + 1; j < vertexCount; j++) {
-                if (graph.edges[i][j] != E{}) allEdges.push_back({graph.vertices[i], graph.vertices[j], graph.edges[i][j]});
+                if (graph.edges[i][j] != E{}) allEdges.push_back({i, j, graph.edges[i][j]});
             }
         }
         std::sort(allEdges.begin(), allEdges.end(), [](const Edge& a, const Edge& b) { return a.weight < b.weight; });
@@ -396,10 +397,10 @@ public:
         int edgesAdded = 0;
         int requiredEdges = vertexCount - 1;
         for (const auto& edge : allEdges) {
-            V startVertex = edge.start;
-            V endVertex = edge.end;
-            auto connectedResult = uf.isConnected(startVertex, endVertex);
-            if (!connectedResult.has_value()) {
+            V startVertex = graph.vertices[edge.start];
+            V endVertex = graph.vertices[edge.end];
+            TRY(isConnected, uf.isConnected(startVertex, endVertex));
+            if (!isConnected) {
                 auto unionResult = uf.unionSet(startVertex, endVertex);
                 if (!unionResult.has_value()) return std::unexpected(unionResult.error());
                 TRY(startIndex, findVertexIndex(startVertex));
@@ -418,7 +419,9 @@ public:
         if (isEmpty()) return std::unexpected(DataStructureError::ContainerIsEmpty);
         Graph printGraph;
         std::cout << "Adjacency Matrix Graph:" << std::endl;
-        std::cout << "Vertices: " << graph.vertices << std::endl;
+        std::cout << "Vertices: " << std::endl;
+        for (const auto& vertex : graph.vertices) std::cout << vertex << " ";
+        std::cout << std::endl;
         std::cout << "Edges:" << std::endl;
         for (size_t i = 0; i < graph.vertices.size(); i++) {
             for (size_t j = 0; j < graph.vertices.size(); j++) {
@@ -426,6 +429,7 @@ public:
             }
             std::cout << std::endl;
         }
+        return {};
     }
 
     void clear() {
