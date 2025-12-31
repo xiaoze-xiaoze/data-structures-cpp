@@ -18,6 +18,50 @@ static auto compareDesc(KeyExtractor extractor) {
     };
 }
 
+template<typename T, typename Comparator>
+void merge(std::vector<T>& vec, int left, int mid, int right, Comparator comp) {
+    std::vector<T> temp(vec.begin() + left, vec.begin() + right + 1);
+    int i = 0, j = mid - left + 1, k = left;
+    int a = mid - left + 1, b = right - mid;
+    while (i < a && j < b) {
+        if (!comp(temp[j], temp[i])) {
+            vec[k++] = temp[i++];
+        } else {
+            vec[k++] = temp[j++];
+        }
+    }
+    while (i < a) vec[k++] = temp[i++];
+    while (j < b) vec[k++] = temp[j++];
+}
+
+template<typename T, typename Comparator>
+int partition(std::vector<T>& vec, int low, int high, Comparator comp) {
+    T pivot = vec[high];
+    int i = low - 1;
+    
+    for (int j = low; j < high; ++j) {
+        if (!comp(pivot, vec[j])) {
+            ++i;
+            std::swap(vec[i], vec[j]);
+        }
+    }
+    std::swap(vec[i + 1], vec[high]);
+    return i + 1;
+}
+
+template<typename T, typename Comparator>
+void heapify(std::vector<T>& vec, int n, int i, Comparator comp) {
+    int extreme = i;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+    if (left < n && comp(vec[left], vec[extreme])) extreme = left;
+    if (right < n && comp(vec[right], vec[extreme])) extreme = right;
+    if (extreme != i) {
+        std::swap(vec[i], vec[extreme]);
+        heapify(vec, n, extreme, comp);
+    }
+}
+
 /*
  冒泡排序 (Bubble Sort)：
      时间复杂度：O(n²) 最坏/平均情况，O(n) 最好情况（已排序）
@@ -29,7 +73,16 @@ static auto compareDesc(KeyExtractor extractor) {
  */
 template<typename T, typename Comparator>
 void bubbleSort(std::vector<T>& vec, Comparator comp) {
-
+    int n = vec.size();
+    for (int i = 0; i < n - 1; i++) {
+        bool swapped = false;
+        for (int j = 0; j < n - i - 1; j++) {
+            if (comp(vec[j], vec[j + 1])) {
+                std::swap(vec[j], vec[j + 1]);
+            }
+        }
+        if (!swapped) break;
+    }
 }
 
 /*
@@ -43,7 +96,18 @@ void bubbleSort(std::vector<T>& vec, Comparator comp) {
  */
 template<typename T, typename Comparator>
 void selectionSort(std::vector<T>& vec, Comparator comp) {
-
+    int n = vec.size();
+    for (int i = 0; i < n - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < n; j++) {
+            if (comp(vec[j], vec[minIndex])) {
+                minIndex = j;
+            }
+        }
+        if (minIndex != i) {
+            std::swap(vec[i], vec[minIndex]);
+        }
+    }
 }
 
 /*
@@ -57,7 +121,15 @@ void selectionSort(std::vector<T>& vec, Comparator comp) {
  */
 template<typename T, typename Comparator>
 void insertionSort(std::vector<T>& vec, Comparator comp) {
-
+    for (int i = 1; i < n; i++) {
+        T key = vec[i];
+        int j = i - 1;
+        while (j >= 0 && comp(key, vec[j])) {
+            vec[j + 1] = vec[j];
+            j--;
+        }
+        vec[j + 1] = key;
+    }
 }
 
 /*
@@ -71,7 +143,18 @@ void insertionSort(std::vector<T>& vec, Comparator comp) {
  */
 template<typename T, typename Comparator>
 void shellSort(std::vector<T>& vec, Comparator comp) {
-
+    int n = vec.size();
+    for (int gap = n / 2; gap > 0; gap /= 2) {
+        for (int i = gap; i < n; ++i) {
+            T temp = vec[i];
+            int j = i;
+            while (j >= gap && comp(temp, vec[j - gap])) {
+                vec[j] = vec[j - gap];
+                j -= gap;
+            }
+            vec[j] = temp;
+        }
+    }
 }
 
 /*
@@ -85,7 +168,15 @@ void shellSort(std::vector<T>& vec, Comparator comp) {
  */
 template<typename T, typename Comparator>
 void mergeSort(std::vector<T>& vec, Comparator comp) {
-
+    std::function<void(int, int)> mergeSortHelper = [&](int left, int right) {
+            if (left < right) {
+                int mid = left + (right - left) / 2;
+                mergeSortHelper(left, mid);
+                mergeSortHelper(mid + 1, right);
+                merge(vec, left, mid, right, comp);
+            }
+        };
+    mergeSortHelper(0, vec.size() - 1);
 }
 
 /*
@@ -99,7 +190,14 @@ void mergeSort(std::vector<T>& vec, Comparator comp) {
  */
 template<typename T, typename Comparator>
 void quickSort(std::vector<T>& vec, Comparator comp) {
-
+    std::function<void(int, int)> quickSortHelper = [&](int low, int high) {
+            if (low < high) {
+                int pi = partition(vec, low, high, comp);
+                quickSortHelper(low, pi - 1);
+                quickSortHelper(pi + 1, high);
+            }
+        };
+    quickSortHelper(0, vec.size() - 1);
 }
 
 /*
@@ -113,6 +211,11 @@ void quickSort(std::vector<T>& vec, Comparator comp) {
  */
 template<typename T, typename Comparator>
 void heapSort(std::vector<T>& vec, Comparator comp) {
-
+    int n = vec.size();
+    for (int i = n / 2 - 1; i >= 0; --i) heapify(vec, n, i, comp);
+    for (int i = n - 1; i > 0; --i) {
+        std::swap(vec[0], vec[i]);
+        heapify(vec, i, 0, comp);
+    }
 }
 
